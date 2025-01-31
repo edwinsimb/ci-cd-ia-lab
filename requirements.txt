@@ -1,2 +1,4 @@
 tensorflow
-pickle
+gunicorn
+flask
+numpy
