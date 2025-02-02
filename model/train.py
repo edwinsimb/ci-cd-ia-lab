@@ -7,16 +7,17 @@ import pickle
 x_train, x_test = x_train / 255.0, x_test / 255.0
 # Definir modelo
 model = keras.Sequential([
- keras.layers.Flatten(input_shape=(28, 28)),
- keras.layers.Dense(128, activation='relu'),
- keras.layers.Dense(10, activation='softmax')
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
 ])
 model.compile(optimizer='adam',
- loss='sparse_categorical_crossentropy',
- metrics=['accuracy'])
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy'])
 
 # Entrenar modelo
 model.fit(x_train, y_train, epochs=5)
+
 # Guardar modelo
 with open('model/model.pkl', 'wb') as f:
     pickle.dump(model, f)
