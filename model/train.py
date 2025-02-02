@@ -20,4 +20,5 @@ model.fit(x_train, y_train, epochs=5)
 # Guardar modelo
 with open('model/model.pkl', 'wb') as f:
     pickle.dump(model, f)
+    
 print(" Modelo entrenado y guardado en model.pkl")
