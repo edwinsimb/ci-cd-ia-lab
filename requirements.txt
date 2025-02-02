@@ -1,4 +1,4 @@
-tensorflow
-gunicorn
 flask
+gunicorn
 numpy
+tensorflow-cpu
